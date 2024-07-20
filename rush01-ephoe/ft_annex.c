@@ -15,21 +15,20 @@
 
 int	main(void)
 {
-	int	size;
-	int	*p;
+	int	*arr;
+	char	row1[] = "4 3 2 1";
+	char	row2[] = "2 4 1 3";
+	char	row3[] = "3 1 4 2";
+	char	row4[] = "1 2 3 4";
 
-	p = (int*) malloc(4*sizeof(int));
-	p[0] = '1';
-	p[1] = '2';
-	p[2] = '3';
-	p[3] = '4';
-	write(1, &p[0], sizeof(int));
-	write(1, &p[1], sizeof(int));
-	write(1, &p[2], sizeof(int));
-	write(1, &p[3], sizeof(int));
+	arr = (int *)malloc(4 * sizeof(int));
+	write(1, row1, 7 * sizeof(char));
 	write(1, "\n", 1);
-	free(p);
-
-	
+	write(1, row2, 7 * sizeof(char));
+	write(1, "\n", 1);
+	write(1, row3, 7 * sizeof(char));
+	write(1, "\n", 1);
+	write(1, row4, 7 * sizeof(char));
+	free(arr);
 	return (0);
 }
